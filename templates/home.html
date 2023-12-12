@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% import "_tweet.html" as tweet %}
+
+
+{% block app %}
+
+<form action="/tweets/new" method="post" class="form mb-6">
+    <div class="field">
+        <div class="control">
+            <textarea class="textarea" name="content" placeholder="What's happening?"></textarea>
+        </div>
+    </div>
+    <div>
+        <div>
+            <button class="button is-success" type="submit">Tweet</button>
+        </div>
+    </div>
+</form>
+
+{% for t in tweets %}
+    {{ tweet::render(t) }}
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% macro render(tweet) %}
+<div class="notification mt-4">
+    <p class="is-size-5 mb-4">{{tweet.message}}</p>
+    <p>
+        <span class="is-size-6">by {{tweet.name}}</span>
+        <span class="is-size-7">at {{tweet.posted_at}}</span>
+    </p>
+</div>
+
+{% endmacro %}
